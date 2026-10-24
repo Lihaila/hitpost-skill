@@ -1,7 +1,7 @@
 {
   "name": "hitpost",
-  "version": "1.0.1",
-  "description": "Write X (Twitter) posts that earn attention and sound human: three drafts with different angles, X-accurate length checks, one-click share links. Free version of HitPost (lihaila.si).",
+  "version": "1.1.0",
+  "description": "Write X (Twitter) posts that earn attention and sound human. hitpost: free, offline writing rules with X-accurate length checks. hitpost-pro: runs HitPost (lihaila.si) on your account with live X research and posting, using HitPost credits.",
   "author": {
     "name": "Lihai La",
     "url": "https://lihaila.si"
