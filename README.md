@@ -1,14 +1,14 @@
-# HitPost skill for Claude
+# HitPost skills for AI agents
 
-Write X (Twitter) posts that earn attention and sound human, right inside Claude.
+Write X (Twitter) posts that earn attention and sound human, right inside your AI agent: Claude Code, Codex, Cursor, Gemini CLI or any agent that supports SKILL.md skills.
 
 Two skills, from the makers of [HitPost](https://lihaila.si):
 
 | | **hitpost** | **hitpost-pro** |
 |---|---|---|
-| What writes the posts | Claude, following HitPost's writing rules | HitPost's own pipeline, on your account |
+| What writes the posts | Your agent, following HitPost's writing rules | HitPost's own pipeline, on your account |
 | Live X research (what X is saying this week) | – (web search only) | ✓ Grok reads X live |
-| Polish with a blind multi-model judge | Claude scores its own rewrites | ✓ DeepSeek + Qwen rewrite, Grok judges |
+| Polish with a blind multi-model judge | Your agent scores its own rewrites | ✓ DeepSeek + Qwen rewrite, Grok judges |
 | X Articles | – | ✓ |
 | Posting | Share links | ✓ Posts to your X account after you confirm |
 | Cost | Free | Free to install; uses [HitPost credits](https://lihaila.si) (free credits on sign-up, then top up) |
@@ -26,13 +26,13 @@ Give it an idea, a topic, a link or a rough note. You get back **three ready-to-
 
 ## hitpost-pro (HitPost credits)
 
-Runs the real HitPost on your account from inside Claude: live research, three drafts (or a full X Article), polish, then posting after you confirm the exact text.
+Runs the real HitPost on your account from inside your agent: live research, three drafts (or a full X Article), polish, then posting after you confirm the exact text.
 
 1. Sign in with X at [lihaila.si](https://lihaila.si). HitPost is for blue-check accounts.
-2. Open the account menu → **Use in Claude** → **Create a key**.
-3. Install the skill (below) and paste the key when Claude asks.
+2. Open the account menu → **Use in AI agents** → **Create a key**.
+3. Install the skill (below) and paste the key when your agent asks.
 
-Each craft uses 1 credit; polishing and formatting are free within a daily allowance. New accounts get free credits once, then you top up on the site with Stripe. Credits are shared between the site and the skill, and a craft that fails is refunded. Built for Claude Code; the claude.ai sandbox may block calls to outside servers.
+Each craft uses 1 credit; polishing and formatting are free within a daily allowance. New accounts get free credits once, then you top up on the site with Stripe. Credits are shared between the site and the skill, and a craft that fails is refunded. It needs an agent with network access; the claude.ai sandbox may block calls to outside servers.
 
 ## Install
 
@@ -51,11 +51,13 @@ cp -r hitpost-skill/skills/hitpost ~/.claude/skills/        # free
 cp -r hitpost-skill/skills/hitpost-pro ~/.claude/skills/    # HitPost credits
 ```
 
+**Any other agent that supports SKILL.md skills** (Codex, Cursor, Gemini CLI and others): copy the skill folder from `skills/` into that agent's skills directory (see its docs for the location). The scripts are plain Node with no dependencies, so nothing else is needed. We built and tested these with Claude Code.
+
 **claude.ai**
 
 Download `hitpost.zip` (or `hitpost-pro.zip`) from the [latest release](https://github.com/Lihaila/hitpost-skill/releases/latest). Then open **Settings → Capabilities**, turn on code execution, and upload it under **Skills**.
 
-Both skills need Node 18 or later for their scripts. In Claude Code they use the Node on your machine.
+Both skills need Node 18 or later for their scripts; they use the Node on your machine.
 
 ## Try it
 

@@ -1,6 +1,6 @@
 ---
 name: hitpost-pro
-description: Run HitPost (lihaila.si) from Claude. It writes X (Twitter) posts, threads, long posts and X Articles from live research (Grok reads what X is saying this week, Brave checks the web and news), polishes drafts with a blind multi-model judge, and posts them to the user's own X account. Uses the user's HitPost account and credits through an API key. Use it whenever the user has a HitPost account or key, mentions HitPost Pro, or wants live X research, an X Article, or a post published to X from Claude, even if they don't say "HitPost".
+description: Run HitPost (lihaila.si) from your AI agent. It writes X (Twitter) posts, threads, long posts and X Articles from live research (Grok reads what X is saying this week, Brave checks the web and news), polishes drafts with a blind multi-model judge, and posts them to the user's own X account. Uses the user's HitPost account and credits through an API key. Use it whenever the user has a HitPost account or key, mentions HitPost Pro, or wants live X research, an X Article, or a post published to X from the agent, even if they don't say "HitPost".
 ---
 
 # HitPost Pro
@@ -11,7 +11,7 @@ Everything goes through one script, `scripts/hitpost.mjs` (Node 18+, no dependen
 
 ## Accounts, credits and keys
 
-- HitPost is for **blue-check X accounts**. The user signs in with X at lihaila.si, then creates a key under **account menu → Use in Claude**.
+- HitPost is for **blue-check X accounts**. The user signs in with X at lihaila.si, then creates a key under **account menu → Use in AI agents**.
 - New accounts get free credits once. After that, they **top up with Stripe on the website** (account menu → Top up). Credits are shared between the site and this skill.
 - **Costs:** a craft (live research plus three drafts, or one X Article) uses 1 credit. Optimize and format are free within a daily allowance. Posting is free, except that a post containing a link uses 1 credit.
 - A craft that fails on HitPost's side is refunded automatically.
@@ -22,7 +22,7 @@ Run `me`. If it exits with code 2, the JSON's `action` says what the user has to
 
 | action | Tell the user |
 |---|---|
-| `create_key` | Sign in with X at lihaila.si, open the account menu → **Use in Claude** → **Create a key**, and paste the key here. Then run `login <key>`. The key is saved to `~/.config/hitpost/key`, readable only by them. |
+| `create_key` | Sign in with X at lihaila.si, open the account menu → **Use in AI agents** → **Create a key**, and paste the key here. Then run `login <key>`. The key is saved to `~/.config/hitpost/key`, readable only by them. |
 | `blue_check` | HitPost needs a blue-check X account (X Premium; Basic doesn't include a check mark). |
 | `top_up` | They're out of credits: top up at lihaila.si → account menu → **Top up**, then try again. |
 | `reconnect_x` | X access expired: sign in with X again at lihaila.si. |

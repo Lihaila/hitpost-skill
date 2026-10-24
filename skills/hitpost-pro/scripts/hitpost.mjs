@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // HitPost API client for the HitPost Pro skill. No dependencies; Node 18+.
 //
-//   node hitpost.mjs login <key>          save the API key (from lihaila.si → account menu → Use in Claude)
+//   node hitpost.mjs login <key>          save the API key (from lihaila.si → account menu → Use in AI agents)
 //   node hitpost.mjs me                   account, credits and today's optimizations left
 //   node hitpost.mjs craft --idea "..." [--format single|thread|long|article] [--tone auto|insight|story|bold|funny|pro] [--lang auto|en|zh|ja|ko|es|fr|de|pt] [--handle you]
 //   node hitpost.mjs optimize --posts posts.json [--craft <craftId>]
@@ -18,7 +18,7 @@ import path from 'node:path';
 const BASE = (process.env.HITPOST_URL || 'https://lihaila.si').replace(/\/+$/, '');
 const KEY_FILE = path.join(os.homedir(), '.config', 'hitpost', 'key');
 const TOPUP = `${BASE}/ (account menu → Top up)`;
-const KEYS = `${BASE}/ (sign in with X → account menu → Use in Claude → Create a key)`;
+const KEYS = `${BASE}/ (sign in with X → account menu → Use in AI agents → Create a key)`;
 
 const out = (obj, code = 0) => { process.stdout.write(JSON.stringify(obj, null, 2) + '\n'); process.exit(code); };
 const needs = (action, message) => out({ ok: false, action, message }, 2);
