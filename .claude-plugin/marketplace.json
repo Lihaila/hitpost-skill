@@ -1,0 +1,15 @@
+{
+  "name": "hitpost",
+  "description": "HitPost: X post writing skills for Claude, from lihaila.si.",
+  "owner": {
+    "name": "Lihai La",
+    "url": "https://lihaila.si"
+  },
+  "plugins": [
+    {
+      "name": "hitpost",
+      "source": "./",
+      "description": "Write X (Twitter) posts that earn attention and sound human. Free version of HitPost (lihaila.si)."
+    }
+  ]
+}
