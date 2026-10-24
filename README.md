@@ -43,6 +43,14 @@ Each craft uses 1 credit; polishing and formatting are free within a daily allow
 /plugin install hitpost@hitpost
 ```
 
+This installs both skills. Or copy one in by hand:
+
+```bash
+git clone https://github.com/Lihaila/hitpost-skill
+cp -r hitpost-skill/skills/hitpost ~/.claude/skills/        # free
+cp -r hitpost-skill/skills/hitpost-pro ~/.claude/skills/    # HitPost credits
+```
+
 **Updating in Claude Code:** plugins don't update on their own. To get the latest version:
 
 ```
@@ -51,14 +59,6 @@ Each craft uses 1 credit; polishing and formatting are free within a daily allow
 ```
 
 Then restart Claude Code.
-
-This installs both skills. Or copy one in by hand:
-
-```bash
-git clone https://github.com/Lihaila/hitpost-skill
-cp -r hitpost-skill/skills/hitpost ~/.claude/skills/        # free
-cp -r hitpost-skill/skills/hitpost-pro ~/.claude/skills/    # HitPost credits
-```
 
 **Any other agent that supports SKILL.md skills** (Codex, Cursor, Gemini CLI and others): copy the skill folder from `skills/` into that agent's skills directory (see its docs for the location). The scripts are plain Node with no dependencies, so nothing else is needed. We built and tested these with Claude Code.
 
