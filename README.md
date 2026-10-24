@@ -43,6 +43,15 @@ Each craft uses 1 credit; polishing and formatting are free within a daily allow
 /plugin install hitpost@hitpost
 ```
 
+**Updating in Claude Code:** plugins don't update on their own. To get the latest version:
+
+```
+/plugin marketplace update hitpost
+/plugin update hitpost@hitpost
+```
+
+Then restart Claude Code.
+
 This installs both skills. Or copy one in by hand:
 
 ```bash
