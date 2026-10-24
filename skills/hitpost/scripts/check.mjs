@@ -93,7 +93,8 @@ function checkPosts(posts, format, lang) {
   if (!langOk(all, lang)) problems.push(`not written in ${LANG_NAMES[lang] || 'English'}`);
   const hits = BANNED.filter((b) => all.toLowerCase().includes(b.toLowerCase()));
   if (hits.length) problems.push(`sounds machine-written: remove ${hits.map((h) => `"${h}"`).join(', ')}`);
-  if (/https?:\/\//.test(all.replace(/\n*(?:Source|来源|出典|출처)\s*[:：][^\n]*$/u, ''))) problems.push('has a link in the body: name the outlet instead (a link costs reach)');
+  // Bare domains count too: X turns "example.com" into a link.
+  if (new RegExp(URL_RE.source, 'i').test(all.replace(/\n*(?:Source|来源|出典|출처)\s*[:：][^\n]*$/u, ''))) problems.push('has a link or domain in the body (X turns "example.com" into a link, which costs reach): name it instead, e.g. "the Claude app", "The Register"');
   if (format !== 'greeting' && /^\s*(?:\d+[/.)]|🧵)/m.test(posts.slice(1).join('\n'))) problems.push("numbered thread posts: don't number them");
   return problems;
 }

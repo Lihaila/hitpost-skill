@@ -39,7 +39,7 @@ This is distilled from what has actually worked on X:
 - **Pass the takeaway test.** After reading, the reader knows something new or feels something. A rewritten headline fails.
 - **Use the shape that works:** a hook (the claim, the surprise, the relatable moment), then the reasoning, example or evidence, then a concrete takeaway the reader can act on or repeat ("If you're choosing X, check Y first", "So the real cost is Z"). End on the takeaway, never on a restated fact.
 - **Let the first line carry the post** with a specific number, a name or a surprise. Every sentence earns its place, and fragments are fine.
-- **Be concrete, not abstract.** Write "$0.40 per 1M tokens", not "very affordable". Say plainly what is unconfirmed.
+- **Be concrete, not abstract.** Write "40 cents per 1M tokens", not "very affordable". Say plainly what is unconfirmed.
 - **Sound like a person.** These phrases mark a post as AI-written, so leave them out: 🚨, "BREAKING" (unless it is), "Excited to", "Let's dive in", "Here's the thing", "game-changer", "this changes everything", delve, landscape, tapestry, unlock, unleash, seamless, robust, revolutionize, leverage, elevate, empower, cutting-edge, testament, realm, "a new era", "It's not X, it's Y", rule-of-three adjectives, 🔹 bullets, em-dash chains, and ending on "What do you think?" just to farm replies.
 - **Chinese:** avoid 赋能、颠覆、重磅、炸裂、震撼、一文读懂、干货满满、建议收藏、家人们、划重点 and the "不是…而是…" template. Write natural spoken Chinese with full-width punctuation and no spaces between Chinese and Latin letters or digits ("AI可见度", not "AI 可见度").
 - **Emoji and hashtags:** at most one emoji, usually none. Use 0–2 specific, searchable hashtags only when the post is about news, and never #AI or #Tech.
